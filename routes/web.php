@@ -17,5 +17,20 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::view('index', 'index');
+// Route::view('index', 'index')->name('index');
+// Route::view('clinics', 'clinics')->name('clinics');
+// Route::view('employees', 'employees')->name('employees');
+// Route::view('contact', 'contact')->name('contact');
+
+
+Route::view('index', 'index')->name('index');
+Route::view('clinics', 'clinics')->name('clinics');
+Route::view('employees', 'employees')->name('employees');
+Route::view('contact', 'contact')->name('contact');
+
+
+
+
+
+
 require __DIR__ . '/auth.php';

@@ -27,6 +27,9 @@
                     <a class="nav-link" href="{{ route('contact') }}">Contacto</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('pruebas') }}">pruebas</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link disabled" aria-disabled="true">At work</a>
                 </li>
             </ul>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PruebaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,13 +24,15 @@ Route::middleware('auth')->group(function () {
 // Route::view('contact', 'contact')->name('contact');
 
 
+
 Route::view('index', 'index')->name('index');
 Route::view('clinics', 'clinics')->name('clinics');
 Route::view('employees', 'employees')->name('employees');
 Route::view('contact', 'contact')->name('contact');
+// Route::view('pruebas', 'pruebas', ['posts' => $posts])->name('pruebas');
 
-
-
+Route::get('pruebas', [PruebaController::class, "method"])->name('pruebas');
+// pruebas   
 
 
 

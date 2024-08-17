@@ -31,9 +31,9 @@ Route::view('employees', 'employees')->name('employees');
 Route::view('contact', 'contact')->name('contact');
 // Route::view('pruebas', 'pruebas', ['posts' => $posts])->name('pruebas');
 
-Route::get('pruebas', [PruebaController::class, "method"])->name('pruebas');
+// Route::get('pruebas', [PruebaController::class, "index"])->name('pruebas');
 // pruebas   
-
+Route::get('pruebas', [PruebaController::class, "indexDB"])->name('pruebas');
 
 
 require __DIR__ . '/auth.php';

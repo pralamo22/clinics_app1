@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 
 class PruebaController
 {
@@ -22,7 +23,7 @@ class PruebaController
         ];
         return view('pruebas', ['posts' => $posts]);
     }
-    public function method()
+    public function index()
     {
 
 
@@ -37,5 +38,12 @@ class PruebaController
 
         ];
         return view('pruebas', ['posts' => $posts]);
+    }
+
+    public function indexDB()
+    {
+        $postsDB = DB::table('clinics')->get();
+
+        return view('pruebas', ['postsDB' => $postsDB]);
     }
 }

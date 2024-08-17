@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Clinics</title>
+    <title> {{ $metaTitle ?? 'Default title' }}</title>
+    <meta name="description" content="{{ $metaDescription ?? 'Default description' }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -19,6 +20,7 @@
 
 <body>
     @include('partials.navigation')
+
     {{ $slot }}
 
 
